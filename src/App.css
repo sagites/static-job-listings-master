@@ -1,0 +1,29 @@
+* {
+    /* Primary Colours */
+    --primary-desaturated-dark-cyan:  hsl(180, 29%, 50%);
+
+    /* Neutral Colours */
+    --neutral-background-grayish-cyan: hsl(180, 52%, 96%);
+    --neutral-filter-grayish-cyan: hsl(180, 31%, 95%);
+    --neutral-dark-grayish-cyan: hsl(180, 8%, 52%);
+    --neutral-darker-grayish-cyan: hsl(180, 14%, 20%);
+
+    box-sizing: border-box;
+    /* margin: 0;
+    padding: 0; */
+}
+
+body {
+    padding: 0;
+}
+
+img, 
+h1,
+h2,
+ul,
+p {
+    padding: 0;
+    margin: 0;
+}
+
+
