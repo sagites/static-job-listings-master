@@ -7,9 +7,6 @@ import "./App.css"
 const App = ({data}) => {
   return ( 
     <div className="body">
-      <div className="backpicture">
-        <img src="../public/images/bg-header-desktop.svg" alt="" />
-      </div>
       
       <div>
        {data && data.map( (item, i) => (
