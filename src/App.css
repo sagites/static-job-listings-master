@@ -67,7 +67,8 @@ img {
     /* min-height: 100vh; */
 }
 
-.buttons {
+.button {
+    display: flex;
     background-color: var(--neutral-filter-grayish-cyan);
     color: var(--primary-desaturated-dark-cyan);
     border: none;
