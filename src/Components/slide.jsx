@@ -7,13 +7,20 @@ const Slide = ({
     postedAt,
     contract,
     level,
+    role,
     location,
     languages,
     tools 
 }) => {
     return ( 
         <div className="main">
-            <img className="image" src={logo} alt="" />
+
+            <div className="holder">
+
+            <div className="companyLogo">
+                <img className="image" src={logo} alt="" />
+            </div>
+
             <div className="body">
                 <h1>{company} </h1>
                 <p>{position}</p>
@@ -22,9 +29,25 @@ const Slide = ({
                     <li>{contract}</li>
                     <li>{location}</li>
                 </ul>
-                <p>{languages} {tools} {level}</p>
-                <p></p>
             </div>
+
+
+            <div className="buttonSection">
+                <button className="buttons">{role}</button>
+                <button className="buttons">{level}</button>
+                {
+                    languages.map((language, i)=>(
+                        <button className="buttons" key={i}>{language}</button>
+                    ))
+                }
+                {
+                    tools.map((tool, i)=>(
+                        <button className="buttons" key={i}>{tool}</button>
+                    ))
+                    }
+            </div>
+            </div>
+
         </div>
      );
 }
