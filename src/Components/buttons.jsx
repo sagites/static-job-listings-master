@@ -1,10 +1,14 @@
-const buttonSector = ({
+const ButtonSector = ({
     languages,
     tools
 }) => {
     return ( 
-        
+        <>
+            {/* <button>{languages}</button> */}
+            <button>{tools}</button>
+        </>
+
      );
 }
  
-export default buttonSector;
+export default ButtonSector;
