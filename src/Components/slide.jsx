@@ -3,6 +3,8 @@
 const Slide = ({
     company,
     logo,
+    news,
+    featured,
     position,
     postedAt,
     contract,
@@ -15,39 +17,45 @@ const Slide = ({
     return ( 
         <div className="main">
 
-            <div className="holder">
+            <div>
 
-            <div className="companyLogo">
-                <img className="image" src={logo} alt="" />
+                <img
+                    src={logo}
+                    alt={company}
+                />
+
+                <div>
+
+                    <div>
+                        <h1 className="companyName">{company}</h1>
+                        <div>
+                            { news == true ? <div className="new">NEW</div> : null }
+                            { featured  == true ? <div className="featured">FEATURED</div> : null}
+                        </div>
+                    </div>
+
+                    <div>{position}</div>
+
+                    <ul>
+                        <li>{postedAt}</li>
+                        <li>{contract}</li>
+                        <li>{location}</li>
+                    </ul>
+                </div>
             </div>
 
-            <div className="body">
-                <h1>{company} </h1>
-                <p>{position}</p>
-                <ul>
-                    <li>{postedAt}</li>
-                    <li>{contract}</li>
-                    <li>{location}</li>
-                </ul>
-            </div>
+            <hr className="hidden"/>
 
-
-            <div className="buttonSection">
-                <button className="buttons">{role}</button>
-                <button className="buttons">{level}</button>
-                {
-                    languages.map((language, i)=>(
-                        <button className="buttons" key={i}>{language}</button>
-                    ))
-                }
-                {
-                    tools.map((tool, i)=>(
-                        <button className="buttons" key={i}>{tool}</button>
-                    ))
-                    }
+            <div className="buttonHolder">
+                <div onClick={() => handleFilterClick(role)} className="button">{role}</div>
+                <div onClick={() => handleFilterClick(level)} className="button">{level}</div>
+                {tools.map((tool, index) => (
+                    <div key={index} className="button" onClick={() => handleFilterClick(role)}>{tool}</div>
+                )) }
+                {languages.map((language, index) => (
+                    <div key={index} className="button" onClick={() => handleFilterClick(role)}>{language}</div>
+                )) }
             </div>
-            </div>
-
         </div>
      );
 }
