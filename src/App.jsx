@@ -43,7 +43,7 @@ const App = () => {
                   <div 
                      onClick={() => setSelectedFilters((prevFilters) => prevFilters?.filter((element) => element !== filter))}  
                   >
-                    <img src="../public/images/icon-remove.svg" alt="" />
+                    <img src="./images/icon-remove.svg" alt="" />
                   </div>
                 </div>
 
