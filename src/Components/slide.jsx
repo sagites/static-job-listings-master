@@ -12,51 +12,59 @@ const Slide = ({
     role,
     location,
     languages,
-    tools 
+    tools,
+    onFilterClick = undefined
 }) => {
+
+    function handleFilterClick(value) {
+        onFilterClick(value)
+    }
     return ( 
-        <div className="main">
+        <div className="container">
+            <div className="main">
 
-            <div>
+                <div className="firstSection">
 
-                <img
-                    src={logo}
-                    alt={company}
-                />
+                    <img
+                        src={logo}
+                        alt={company}
+                    />
 
-                <div>
+                    <div className="information">
 
-                    <div>
-                        <h1 className="companyName">{company}</h1>
-                        <div>
-                            { news == true ? <div className="new">NEW</div> : null }
-                            { featured  == true ? <div className="featured">FEATURED</div> : null}
+                        <div className="companySide">
+                            <p className="companyName">{company}</p>
+                            <div className="conditional">
+                                { news == true ? <div className="new">NEW</div> : null }
+                                { featured  == true ? <div className="featured">FEATURED</div> : null}
+                            </div>
                         </div>
+
+                        <div className="position">{position}</div>
+
+                        <ul className="minorThings">
+                            <li className="listItems">{postedAt}</li>
+                            <li className="listItems">{contract}</li>
+                            <li className="listItems">{location}</li>
+                        </ul>
                     </div>
+                </div>
 
-                    <div>{position}</div>
+                <hr className="hidden"/>
 
-                    <ul>
-                        <li>{postedAt}</li>
-                        <li>{contract}</li>
-                        <li>{location}</li>
-                    </ul>
+                <div className="buttonHolder">
+                    <button onClick={() => handleFilterClick(role)} className="button">{role}</button>
+                    <button onClick={() => handleFilterClick(level)} className="button">{level}</button>
+                    {tools.map((tool, index) => (
+                        <button key={index} className="button" onClick={() => handleFilterClick(tool)}>{tool}</button>
+                    )) }
+                    {languages.map((language, index) => (
+                        <button key={index} className="button" onClick={() => handleFilterClick(language)}>{language}</button>
+                    )) }
                 </div>
             </div>
-
-            <hr className="hidden"/>
-
-            <div className="buttonHolder">
-                <div onClick={() => handleFilterClick(role)} className="button">{role}</div>
-                <div onClick={() => handleFilterClick(level)} className="button">{level}</div>
-                {tools.map((tool, index) => (
-                    <div key={index} className="button" onClick={() => handleFilterClick(role)}>{tool}</div>
-                )) }
-                {languages.map((language, index) => (
-                    <div key={index} className="button" onClick={() => handleFilterClick(role)}>{language}</div>
-                )) }
-            </div>
         </div>
+
      );
 }
  
