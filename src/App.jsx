@@ -30,7 +30,7 @@ const App = () => {
 
 
   return ( 
-    <div>
+    <div className="firstThing">
       <Header/>
         {/* Filter body */}
         {
@@ -43,7 +43,7 @@ const App = () => {
                   <div 
                      onClick={() => setSelectedFilters((prevFilters) => prevFilters?.filter((element) => element !== filter))}  
                   >
-                    <img src="./images/icon-remove.svg" alt="" />
+                    <img src="../public/images/icon-remove.svg" alt="" />
                   </div>
                 </div>
 
@@ -64,7 +64,7 @@ const App = () => {
               <Slide
               key={index}
                 company={item.company}
-                logo={item.log}
+                logo={item.logo}
                 news={item.news}
                 featured={item.featured}
                 position={item.position}
@@ -85,7 +85,7 @@ const App = () => {
             <Slide
               key={index}
               company={item.company}
-              logo={item.log}
+              logo={item.logo}
               news={item.news}
               featured={item.featured}
               position={item.position}
