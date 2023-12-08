@@ -40,6 +40,49 @@ p {
     margin: 0;
 }
 
+/* Colors and font */
+
+.companyName {
+    color: var(--primary-desaturated-dark-cyan);
+    font-family: 'League Spartan Bold';
+}
+
+.position:hover {
+    cursor: pointer;
+    color: var(--primary-desaturated-dark-cyan);
+}
+
+.new {
+    color: white;
+    background-color: var(--primary-desaturated-dark-cyan);
+    font-family: 'League Spartan Medium';
+}
+
+.featured {
+    color: white;
+    background-color: var(--neutral-darker-grayish-cyan);
+    font-family: 'League Spartan Medium';
+}
+
+.position {
+    color: var(--neutral-darker-grayish-cyan);
+    font-family: 'League Spartan Medium';
+}
+
+.listItems {
+    color: var(--neutral-dark-grayish-cyan);
+    font-family: 'League Spartan Medium';
+}
+
+.button {
+    font-family: 'League Spartan Medium';
+}
+
+.button:hover {
+    color: white;
+    background-color: var(--primary-desaturated-dark-cyan);
+}
+
 .body {
     background-color: var(--neutral-background-grayish-cyan);
     width: 100%;
@@ -58,13 +101,64 @@ img {
     background-color: var(--neutral-background-grayish-cyan);
 }
 
+
+.container {
+    display: grid;
+    place-items: center;
+}
+
 .main {
     display: grid;
+    align-items: center;
     grid-template-columns: repeat(3, 1fr);
-    width: 100%;
+    width: 80%;
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
     font-family: 'League Spartan';
     /* background-color: var(--neutral-darker-grayish-cyan); */
     /* min-height: 100vh; */
+}
+
+.firstSection {
+    display: grid;
+    grid-template-columns: 0.6fr 1fr;
+}
+
+.information {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.companyName {
+    display: flex;
+}
+
+
+
+.companySide {
+    display: flex; 
+    place-items: center;
+}
+
+.conditional {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.minorThings {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.hidden {
+    display: hidden;
+}
+
+.buttonHolder {
+    display: flex;
+    gap: 10px;
 }
 
 .button {
@@ -74,6 +168,7 @@ img {
     border: none;
     border-radius: 3px;
     cursor: pointer;
+    padding: 5px;
     
 }
 
