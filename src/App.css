@@ -88,13 +88,18 @@ p {
     width: 100%;
 }
 
-.backPicture {
-    background-color: black;
-    width: 100%;
-}
-
 img {
     max-width: 100%;
+}
+
+/* Main Styling */
+
+.firstThing {
+    background-color: var(--neutral-background-grayish-cyan);
+}
+
+.header {
+    background-color: var(--primary-desaturated-dark-cyan);
 }
 
 .body {
@@ -116,6 +121,8 @@ img {
     margin: 10px;
     background-color: white;
     font-family: 'League Spartan';
+    border-radius: 3px;
+
     /* background-color: var(--neutral-darker-grayish-cyan); */
     /* min-height: 100vh; */
 }
